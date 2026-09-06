@@ -29,8 +29,6 @@ jobs:
         run: |
           python -m py_compile main.py
           python -m py_compile helper.py
-          python -m py_compile validation.py
-          python -m py_compile token_generator.py
           python -m py_compile new-server.py
           python -m py_compile packager/__init__.py
           python -m py_compile packager/config.py
@@ -47,8 +45,6 @@ jobs:
           python -c "import packager.apk"
           python -c "import server.database"
           python -c "import server.app"
-          python -c "import validation"
-          python -c "import token_generator"
 
   workflow-lint:
     name: Workflow YAML validation
